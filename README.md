@@ -9,19 +9,12 @@
 
   - In addition to the current two methods this patch introduces ```Amazon S3 persistence```
   
-  - We have used Java Reflection API that is used to examine or modify the behaviour of methods, classes and interfaces at runtime. 
-  - The required packages for Reflection, the “java.lang.reflect” package, allows us to invoke methods at runtime irrespective of the access modifier.
-  
-  - From Java reflection we removed the dependency of having the required jars during compile time. 
-  
-  - Now since the dependency of jars not required. Additonal jars are required only if you enable ```amazonS3Persistor``` in xava.properties
-  
 ## Steps
   
    ## Step 1
-   - Enable ```amazonS3Persistor``` in xava.properties
+   - Enable ```AmazonS3Persistor``` in xava.properties
    ```
-   amazonS3Persistor=true
+   filePersistorClass=org.openxava.web.editors.AmazonS3Persistor
    ```
    ## Step 2
    - Download the below jars and place it in web/WEB-INF/lib/
